@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="#">
+      <link href="/templates/css/style.css" rel="stylesheet" type="text/css">
+      <title>groupie-tracker</title>
+   </head>
+   <body>
+   <div class="name">
+      <h1 class="title">
+         Groupie Tracker
+      </h1>
+   </div>
+   <div>
+      <form action="/search" method="GET">
+         <p><input list="data" type="search" name="find" placeholder="Try to search"> 
+         <input type="submit" value="Find"></p>
+
+         <datalist id="data">
+            {{range.Bands}}
+              <option value="{{.Name}}-band">{{.Name}} - band</option>
+              {{range .Members}}
+                 <option value="{{.}}-member">{{.}} - artist</option>
+              {{end}}
+               <option value="{{.CreationDate}}-creationDate">{{.CreationDate}} - creation date</option>
+               <option value="{{.FirstAlbum}}-firstAlbumDate">{{.FirstAlbum}} - first album</option>
+               {{range $city, $dates := .Concerts}}
+                  <option value="{{$city}}-concertLocation">{{$city}} - concert location</option>
+                  {{range $date:= $dates}}
+                    <option value="{{$date}}-concertDate">{{$date}} - concert date</option>
+                  {{end}}
+               {{end}}
+            {{end}}
+         </datalist>
+      </form>
+   </div>
+    <div class="artists">
+       <div class="list">
+         {{if .Found}}
+            <span class="text-error">
+               No bands are found
+            </span>
+         {{end}}
+         {{range.FoundBands}}
+         <div class="band">
+            <div class="poster">
+               <a href="/artist/{{.Id}}">
+                  <img src="{{.Images}}" alt="{{.Name}}">
+               </a>
+            </div>
+            <div class="info_main">
+               <div>
+                  <a href="/artist/{{.Id}}">
+                     <h2>{{.Name}}</h2>
+                  </a>
+               </div>
+               <div>
+                  <span class="text-gray">
+                     First album:
+                  </span>
+                  <p>
+                     {{.FirstAlbum}}
+                  </p>
+               </div>
+            </div>
+         </div>
+         {{end}}
+       </div>
+    </div>
+   </body>
+   <footer>
+      <span> ❮❯ by <a href="https://01.alem.school/git/suzera1n">suzera1n</a> and <a href="https://01.alem.school/git/user11">user11</a></span>
+  </footer>
+</html>

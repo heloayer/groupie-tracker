@@ -1,0 +1,231 @@
+html {
+  min-width: 320px;
+}
+
+header {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+  min-height: 60px;
+  padding: 0px 1.5rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.main {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.info_main {
+  color: aliceblue;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding-left: 20px;
+}
+
+.name {
+  flex-direction: column;
+  height: calc(-60px + 25vh);
+  position: relative;
+  align-items: center;
+  -moz-box-align: center;
+  justify-content: center;
+  -moz-box-pack: center;
+  display: flex;
+  text-align: center;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+
+.title {
+  z-index: 1;
+  font-size: 5.625rem;
+  font-weight: 900;
+  border: medium none;
+  color: rgb(32, 35, 41);
+  margin: 0px;
+}
+
+.artists {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  padding: 4.5rem 0px;
+  background: rgb(32, 35, 41) none repeat scroll 0% 0%;
+  min-height: calc(-60px + 50vh);
+}
+
+.list {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+}
+
+.band {
+  width: 550px;
+  height: 265px;
+  display: flex;
+  overflow: hidden;
+  background: rgb(60, 62, 68) none repeat scroll 0% 0%;
+  border-radius: 0.5rem;
+  margin: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.poster img {
+  flex: 3 1 0%;
+  position: relative;
+  padding: 0.75rem;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  
+}
+
+.home h3 {
+  color:rgb(32, 35, 41);
+ 
+}
+
+ul {
+
+  padding-inline-start: 0px;
+}
+
+/* artist.html style */
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4.5rem 0px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: rgb(32, 35, 41);
+}
+
+.info {
+  color: aliceblue;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0 3vw ;
+}
+
+.concert {
+  color: aliceblue;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-right: 25px;
+  word-break: normal;
+}
+
+.dates {
+  position: relative;
+  font-size: 18px;
+}
+
+.dates li {
+  margin-bottom: 5px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.members {
+  font-size: 20px;
+}
+
+.members li {
+  margin-top: 15px;
+}
+
+.text-gray {
+  color: rgb(158, 158, 158);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  position: relative;
+  background: rgb(32, 35, 41) none repeat scroll 0% 0%;
+  color: rgb(158, 158, 158);
+  padding: 4.5rem 0px;
+  min-height: calc(120px);
+  width: 100%;
+  padding: 0;
+}
+
+.text-error {
+  font-size: 5vw;
+  color:aliceblue;
+}
+
+.city {
+  color: rgb(177, 200, 221);
+}
+
+@media (max-width:970px) {
+  .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .title {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width:600px) {
+  .band {
+    width: 87vw;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="/templates/css/style.css" rel="stylesheet" type="text/css">
+      <link rel="shortcut icon" href="#">
+      <title>Error</title>
+   </head>
+   <body>
+      <header>
+         <a href="/" class="home">
+            <div >
+               <h3>Home</h3>
+            </div>
+         </a>
+      </header>
+      <div class="name">
+         <h2 class="title">
+            {{.Code}}
+         </h2>
+      </div>
+      <div class="artists">
+         <div class="list">
+            <div>
+               <div class="info">
+                  <div>
+                     <span class="text-error">
+                        {{.Message}}
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <footer>
+      <span> ❮❯ by <a href="https://01.alem.school/git/suzera1n">suzera1n</a> and <a href="https://01.alem.school/git/user11">user11</a></span>
+  </footer>
+</html>

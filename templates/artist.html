@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="ascii">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="#">
+   <link href="/templates/css/style.css" rel="stylesheet" type="text/css">
+   <title>Artist</title>
+</head>
+<body>
+   <header>
+      <a href="/" class="home"><h3>Home</h3></a>
+   </header>
+   <div class="name">
+      <h2 class="title">{{.Name}}</h2>
+   </div>
+   <div class="about">
+         <div class="logo"><img src="{{.Images}}" alt="{{.Name}}"></div>
+         <div class="info">
+            <p><span class="text-gray">First album:</span> {{.FirstAlbum}}</p>   
+               <span class="text-gray">Members:</span>
+              <div class="members">{{range $member := .Members}}<li>{{$member}}</li>{{end}}</div>
+            <p><span class="text-gray">Creation Date:</span> {{.CreationDate}}</p>
+         </div>
+         <div class="concert">
+            <p><span class="text-gray">Concerts:</span>
+               {{range $city, $dates := .Concerts}}
+                  <li><div class="city">{{$city}}:</div>
+                     <ul class="dates">{{range $date:= $dates}}<li>{{$date}}</li>{{end}}</ul>
+                  </li>
+               {{end}}
+            </p>
+         </div>
+   </div>
+</body>
+<footer>
+    <span> ❮❯ by <a href="https://01.alem.school/git/suzera1n">suzera1n</a> and <a href="https://01.alem.school/git/user11">user11</a></span>
+</footer>
+</html>
